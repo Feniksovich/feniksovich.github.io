@@ -1,0 +1,41 @@
+.loader {
+  animation: load3 0.5s infinite linear;
+  background: #000;
+  background: linear-gradient(to right, #dddddd 10%, rgba(221, 221, 221, 0) 70%);
+  border-radius: 50%;
+  height: 50px;
+  margin: 5em auto;
+  position: relative;
+  width: 50px;
+}
+
+.loader:before {
+  width: 100%;
+  height: 50%;
+  background: #ddd;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader:after {
+  background: #fff;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes load3 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
