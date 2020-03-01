@@ -3,10 +3,10 @@
   background: #000;
   background: linear-gradient(to right, #dddddd 10%, rgba(221, 221, 221, 0) 70%);
   border-radius: 50%;
-  height: 50px;
+  height: 60px;
   margin: 5em auto;
   position: relative;
-  width: 50px;
+  width: 60px;
 }
 
 .loader:before {
