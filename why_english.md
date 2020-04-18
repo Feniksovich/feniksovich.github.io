@@ -53,6 +53,12 @@ position: 0
 Я — прямая противоположность. Те, кто подумал сейчас "Ааа, ЧСВшник" и бебебе с бабаба — поясни.
 Приведи хоть один аргумент, почему я такой же, как и все.
 
+## И еще много-много...
+Кратко резюмируя, причин не любить русский язык и отдать предпочтение английскому у меня достаточно.
+Шанс, что хотя бы 50% посетителей прочитает это, невероятно мал, поэтому не считаю нужным продолжать.
+
+<span class="important" href="https://vk.com/feniksovich">Нашел ошибку в тексте? Скажи об этом, ведь ты же русский.<span>
+
 * The EFI Variable `LoaderTimeInitUSec` contains the timestamp in microseconds
   when the loader was initialized. This value is the time spent in the firmware
   for initialization, it is formatted as numeric, NUL-terminated, decimal
