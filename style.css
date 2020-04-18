@@ -353,3 +353,14 @@ code.highlighter-rouge {
   text-decoration: none;
   color: #26b763;
 }
+
+/* Footer Logo */
+.logo-footer {
+  display: block;
+  padding: 0.5rem 0 0.5rem;
+}
+.logo-footer > img {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+}
