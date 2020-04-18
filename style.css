@@ -366,3 +366,16 @@ code.highlighter-rouge {
   margin: 0 auto;
   width: 220px;
 }
+
+footer p.copyright {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 18px 0 50px;
+  text-align: center; }
+  footer p.copyright a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 100ms ease-in-out; }
+    footer p.copyright a:hover {
+      color: rgba(255, 255, 255, 0.75); }

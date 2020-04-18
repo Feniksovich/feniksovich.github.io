@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<span class="important">Junior Linux Software Specialist</span> with experience administration of Pterodactyl Software, MariaDB, NGINX and Minecraft Servers. <span class="important">Developer Team Lead</span> on Furnex Minecraft Network. A little supporter of several communites — <span class="important">LuckPerms, Pterodactyl, RuBukkit.org</span> and others.
+<span class="important">Junior Linux Software Specialist</span> with experience administration of Pterodactyl Software, MariaDB, NGINX and Minecraft Servers. <span class="important">Developer Team Lead</span> on Furnex Minecraft Network. A little supporter of several communites — <span class="important">LuckPerms, Pterodactyl, RuBukkit.org</span> and etc.
 
 Friendly and sensible :)
 
