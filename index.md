@@ -8,7 +8,7 @@ Friendly and sensible :)
 
 ---
 
-{% assign by_category = site.pages | group_by:"category" %}
+{% assign by_category = site.pages | group_by:"category" | sort:"position" %}
 {% assign extra_pages = site.data.extra_pages | group_by:"category" %}
 {% assign merged = by_category | concat: extra_pages | sort:"name" %}
 
