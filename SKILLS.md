@@ -1,6 +1,6 @@
 ---
 title: Boot Loader Interface
-category: Booting
+category: Test
 layout: default
 position: 0
 ---
