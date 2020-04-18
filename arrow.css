@@ -12,7 +12,7 @@
   line-height: 2rem;
 }
 
-.link-arrowed:hover {
+.link--arrowed:hover {
   text-decoration: none!important;
 }
 .link--arrowed .arrow-icon {
