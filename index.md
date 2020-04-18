@@ -8,26 +8,6 @@ Friendly and sensible :)
 
 ---
 
-{% assign by_category = site.pages | group_by:"category" | sort:"position" %}
-{% assign extra_pages = site.data.extra_pages | group_by:"category" %}
-{% assign merged = by_category | concat: extra_pages | sort:"name" %}
-
-{% for pair in merged %}
-  {% if pair.name != "" %}
-## {{ pair.name }}
-{% assign sorted = pair.items | sort:"title" %}{% for page in sorted %}
-* [{{ page.title }}]({{ page.url | relative_url }}){% endfor %}
-  {% endif %}
-{% endfor %}
-
-## See also
-
-* [Introductory blog story](http://0pointer.de/blog/projects/systemd.html)
-* [Three](http://0pointer.de/blog/projects/systemd-update.html) [status](http://0pointer.de/blog/projects/systemd-update-2.html) [updates](http://0pointer.de/blog/projects/systemd-update-3.html)
-* The [Wikipedia article](https://en.wikipedia.org/wiki/systemd)
-
----
-
 <pre style="color:white; background-color:black; font-size:smaller; padding:6pt 8pt">
 Welcome to <span style="color:blue">Fedora 20 (Heisenbug)</span>!
 
