@@ -378,4 +378,6 @@ footer p.copyright {
     color: rgba(36, 31, 49, 0.5);
     transition: color 100ms ease-in-out; }
     footer p.copyright a:hover {
-      color: rgba(36, 31, 49, 0.75); }
+      color: rgba(36, 31, 49, 0.75);
+      text-decoration: none;
+    }
