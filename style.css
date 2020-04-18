@@ -349,7 +349,7 @@ code.highlighter-rouge {
 
 /* Important Text */
 .important {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   color: #26b763;
 }
