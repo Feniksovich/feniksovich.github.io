@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: 'Heebo';
     src: url('fonts/heebo-regular.woff');
@@ -9,6 +10,8 @@
     src: url('fonts/heebo-bold.woff');
     font-weight: 600;
 }
+*/
+
 
 /* Typography */
 * {
@@ -20,7 +23,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: "Heebo", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -112,9 +115,8 @@ hr {
 /* Footer */
 footer {
   text-align: center;
-  padding: 3em 0 3em;
   font-size: 1em;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 /* Github Code Highlighting */
