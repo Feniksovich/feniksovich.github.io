@@ -59,8 +59,6 @@ position: 0
 **К сведению, это первая и последняя страница на моем сайте, написанная на русском языке.**
 
 ## Ссылки
-[Нашел ошибку в тексте? Скажи об этом, ведь ты же русский.](https://vk.com/feniksovich)<br>
-
 <link rel="stylesheet" href="/arrow.css">
 <div>
 <a class="link link--arrowed" href="https://vk.com/feniksovich">Нашел ошибку в тексте? Скажи об этом, ведь ты же русский
