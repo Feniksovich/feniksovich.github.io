@@ -11,11 +11,9 @@ position: 0
 
 Я просто ненавижу русский язык и на это есть много причин.
 
-systemd can interface with the boot loader to receive performance data and
-other information, and pass control information. This is only supported on EFI
-systems. Data is transferred between the boot loader and systemd in EFI
-variables. All EFI variables use the vendor UUID
-`4a67b082-0a4c-41cf-b6c7-440b29bb8c4f`.
+## Недостатки русского языка
+Безусловно, русский язык является самым богатым языком в мире. Стоит только вспомнить
+как Лев Николаевич Толстой в произведении Война и мир мог описывать обыденные явления на 15 страниц.
 
 * The EFI Variable `LoaderTimeInitUSec` contains the timestamp in microseconds
   when the loader was initialized. This value is the time spent in the firmware
