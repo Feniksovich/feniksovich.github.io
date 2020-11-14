@@ -1,0 +1,256 @@
+/*
+   ____         _ __                 _     __ 
+  / __/__ ___  (_) /__ ___ ___ _  __(_)___/ / 
+ / _// -_) _ \/ /  '_/(_-</ _ \ |/ / / __/ _ \
+/_/  \__/_//_/_/_/\_\/___/\___/___/_/\__/_//_/
+This code is copyrighted by Maxim Fenixov (a.k.a Feniksovich)
+COPYING AND USE OF THIS CODE OR PARTS OF IT IS NOT PERMITTED WITHOUT PRIOR CONSENT.
+*/
+
+:root {
+    --light-purple: #23222b;
+    --dark-purple: #1a1a21;
+    --gray: #d2d6dc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.125rem;
+    text-decoration: none;
+}
+
+body {
+    background: #16151d;
+}
+
+#main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#header {
+    display: block;
+    height: 140px;
+    width: 900px; 
+    /*
+    Alternatives:
+    https://i.gifer.com/4Cb2.gif
+    https://i.gifer.com/fxk6.gif
+    */
+    background: url(https://i.gifer.com/fxk6.gif) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px 6px 0 0;
+}
+
+#content {
+    background: var(--light-purple);
+    padding: 24px 24px 7px 24px;
+}
+
+#basic-info img.avatar {
+    height: 125px;
+    border-radius: 999px;
+    margin-top: -90px;
+    margin-bottom: 15px;
+}
+
+#basic-info span.name {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#basic-info span.tag {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--gray);
+}
+
+#buttons {
+    margin-left: -5px;
+    margin-bottom: 50px;
+}
+
+#buttons span.social__button img {
+    height: 33px;
+    margin: 15px 5px 0 5px;
+    cursor: pointer;
+    outline: none;
+    transition: transform .1s ease-out;
+}
+
+#buttons span.social__button img:hover {
+    transition: background-color .2s cubic-bezier(.3,0,.5,1);
+	transition: transform .1s ease-in;
+	transform: translate3d(0px, -4px, 0px);
+}
+
+i.material-icons-outlined {
+    color: #432ee4;
+    vertical-align: middle;
+    font-size: 24px;
+    margin-left: -3px;
+}
+
+span.h1 {
+    font-weight: 600;
+    color: #fff;
+    vertical-align: middle;
+    padding-left: 2px;
+    position: relative;
+}
+
+span.white-context {
+    font-weight: 500;
+    color: #fff;
+}
+
+span.context, p.context {
+    color: var(--gray);
+    max-width: 500px;
+    line-height: 24px;
+}
+
+.flexitem {
+    flex: 1 1 auto;
+    margin-right: 10px;
+}
+
+/*
+   ____         _ __                 _     __ 
+  / __/__ ___  (_) /__ ___ ___ _  __(_)___/ / 
+ / _// -_) _ \/ /  '_/(_-</ _ \ |/ / / __/ _ \
+/_/  \__/_//_/_/_/\_\/___/\___/___/_/\__/_//_/
+This code is copyrighted by Maxim Fenixov (a.k.a Feniksovich)
+COPYING AND USE OF THIS CODE OR PARTS OF IT IS NOT PERMITTED WITHOUT PRIOR CONSENT.
+*/
+
+div.title {
+    margin-bottom: 4px;
+}
+
+.item__position {
+    /*flex: 1 1 auto;*/
+    margin-right: 18px;
+    /*display: flex;*/
+    height: 116px;
+    min-width: 300px;
+    max-width: 300px;
+    background: var(--dark-purple);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 18px;
+}
+
+.item__position img {
+    height: 40px;
+    margin-right: 12px;
+    float: left;
+}
+
+div.blank__card {
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    background: var(--light-purple);
+    float: left;
+}
+div.bc__timeline {
+    height: 8px;
+    max-width: 120px;
+    border-radius: 4px;
+    background: var(--light-purple);
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+div.bc__name {
+    margin-top: 5px;
+    height: 15px;
+    max-width: 80px;
+    border-radius: 4px;
+    background: var(--light-purple);
+    margin-left: 50px;
+}
+
+div.bc__position {
+    margin-top: 5px;
+    height: 10px;
+    min-width: 100px;
+    border-radius: 4px;
+    background: var(--light-purple);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -80px;
+}
+
+.item__position p.timeline {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.item__position p.project__name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+div.project__info {
+    position: relative;
+}
+
+p.position {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -80px;
+}
+
+#footer {
+    display: block;
+    height: 60px;
+    width: 900px;
+    background: var(--dark-purple);
+    border-radius: 0 0 6px 6px;
+}
+
+div #footer p {
+    font-size: 14px;
+    color: #31303a;
+    font-weight: 600;
+    text-align: center;
+}
+
+div #footer a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4d4b5f;
+    transition-duration: 0.15s;
+}
+
+div #footer a:hover {
+    color: #9490b3;
+    
+}
+
+/*
+   ____         _ __                 _     __ 
+  / __/__ ___  (_) /__ ___ ___ _  __(_)___/ / 
+ / _// -_) _ \/ /  '_/(_-</ _ \ |/ / / __/ _ \
+/_/  \__/_//_/_/_/\_\/___/\___/___/_/\__/_//_/
+This code is copyrighted by Maxim Fenixov (a.k.a Feniksovich)
+COPYING AND USE OF THIS CODE OR PARTS OF IT IS NOT PERMITTED WITHOUT PRIOR CONSENT.
+*/
