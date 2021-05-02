@@ -234,7 +234,7 @@ p.position {
 }
 
 #footer {
-    height: 60px;
+    height: 70px;
     width: 900px;
     background: var(--dark-purple);
     border-radius: 0 0 6px 6px;
@@ -366,4 +366,14 @@ span.skill__info {
     font-size: 14px;
     vertical-align: middle;
     margin-left: 4px;
+}
+
+div.footer-text {
+    padding: 16px 0 16px 0;
+}
+
+i.heart {
+    font-size: 18px;
+    vertical-align: middle;
+    user-select: none;
 }
