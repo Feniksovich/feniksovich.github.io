@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="19" role="img" aria-label="Feniksovich">
+    <title>Feniksovich Rainbow Nickname</title>
+
+    <g fill="#fff" text-anchor="start" font-family="monospace,monospace" font-size="14" font-weight="bold" text-rendering="geometricPrecision">
+        <text x="0" y="14" transform="scale(1)" fill="url(#gradient)">Feniksovich</text>
+    </g>
+
+    <defs>
+        <linearGradient id="gradient" x1="100%" y1="100%" gradientTransform="rotate(90)">
+            <stop offset="100%" stop-color="#32c4ff">
+                <animate attributeName="stop-color" values="#32c4ff;#f706ff;#32c4ff" dur="4s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+    </defs>
+</svg>
