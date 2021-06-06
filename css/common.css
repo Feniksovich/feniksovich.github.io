@@ -377,3 +377,8 @@ i.heart {
     vertical-align: middle;
     user-select: none;
 }
+
+img.project__img {
+    max-height: 40px;
+    max-width: 40px;
+}
