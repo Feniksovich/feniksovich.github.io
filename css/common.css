@@ -82,6 +82,7 @@ body {
 }
 
 #buttons span.social__button img {
+    width: 33px;
     height: 33px;
     margin: 15px 5px 0 5px;
     cursor: pointer;
