@@ -1,0 +1,221 @@
+Signed / Unsigned
+https://onlinetoolz.net/unsigned-signed#base=2&value=10011010&bits=8
+
+Bin -> Hex
+https://www.binaryhexconverter.com/binary-to-hex-converter
+
+Gist 1:
+https://gist.github.com/Feniksovich/78e340b83321a830560a418c41e32435
+
+Gist 2: (old)
+https://gist.github.com/Feniksovich/9cc6822a4d07b9ae9fd7c68a21931b91
+
+Single Precision = 4 bytes, 1-8-23 bit, exp = 127+e
+Double Precision = 8 bytes, 1-11-52 bit, exp = 1023+e
+Double Extended Precision = 10 bytes, 1-15-64 bit, exp = 16383+e
+
+
+################## 4.cpp ##################
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int countNegative(fstream& file) {
+
+    if (!file) return -1;
+
+    double var;
+    int counter = 0;
+
+    while (file >> var) {
+        if (var < 0) counter++;
+    }
+
+    if (file.fail() && !file.eof()) return -1;
+
+    return counter;
+}
+
+int main() {
+
+    fstream file("input.txt", ios::in);
+    int result = countNegative(file);
+
+    cout << result;
+
+    file.close();
+}
+
+################## 6.cpp ##################
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+bool CountRow(int, int, double*, int&);
+
+int main() {
+    ifstream fin;
+    fin.open("input.txt");
+    if (!fin) return 1;
+
+    int n, m;
+    fin >> n >> m;
+
+    double *p = nullptr;
+    if (n * m >= 0) p = new double[n * m];
+
+    for (int i = 0; i < n * m; i++) fin >> p[i];
+
+    int negnum;
+
+    bool code = CountRow(n, m, p, negnum);
+
+    if (code) cout << negnum;
+    else cout << "false";
+
+    fin.close();
+    delete[] p;
+    return 0;
+}
+
+bool CountRow(int n, int m, double *p, int &negnum) {
+
+    if (p == nullptr || m <= 0 || n <= 0) {
+        return false;
+    }
+
+    int counter = 0;
+    bool containsNegative;
+
+    for (int i = 0; i < n; i++) {
+
+        containsNegative = false;
+
+        for (int j = 0; j < m; j++) {
+            if (p[i*m + j] < 0) containsNegative = true;
+        }
+
+        if (containsNegative) counter++;
+    }
+
+    negnum = counter;
+    return true;
+}
+
+################## 7.cpp ##################
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+double series(int);
+
+int main() {
+    ifstream fin;
+    fin.open("input.txt");
+    if (!fin) return 1;
+
+    int n;
+    fin >> n;
+
+    double sum = series(n);
+    cout << sum;
+
+    fin.close();
+    return 0;
+}
+
+/*
+double series(int n) {
+    float tmp = 0;
+    for (int i = 1; i <= n; i++) {
+        tmp += (float) (2*i)/(2*i+1);
+    }
+    return tmp;
+}
+*/
+
+double series(int n) {
+    if (n == 0) return 0;
+    return (float) (2*n)/(2*n+1) + series(n - 1);
+}
+
+################## 8.cpp ##################
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int av_seq(ifstream&, double&);
+
+int main() {
+    ifstream fin;
+    fin.open("input.txt");
+    if (!fin) return 1;
+
+    double av;
+    int code = av_seq(fin, av);
+
+    if (code == 0) cout << av;
+    else cout << code;
+    return 0;
+}
+
+/*
+ПОДПРОГРАММА ВЫЧИСЛЕНИЯ СРЕДНЕЙ ДЛИНЫ СВЯЗНЫХ СТРОГО ВОЗРАСТАЮЩИХ ПОДПОСЛЕДОВАТЕЛЬНОСТЕЙ
+На вход подпрограммы подается:
+    fin – поток для чтения из файла;
+    av – средняя длина связных строго возрастающих подпоследовательностей.
+На выход подпрограмма возвращает:
+    0 – если процесс вычисления завершился успешно;
+    -1 – если файл пуст;
+    -2 – если произошла ошибка чтения из файла;
+    -3 – если поток не открыт.
+Алгоритм индуктивной функции:
+1) Обнулить сумму длин подпоследовательностей и количество подпоследовательностей.
+2) Прочитать число из файла.
+    2.1) Если поток не открыт, вернуть -3.
+    2.2) Если произошла ошибка чтения, вернуть -2.
+    2.3) Если файл закончился, вычислить среднюю длину связных строго возрастающих подпоследовательностей
+        и вернуть 0.
+3) Если число больше предыдущего, увеличить длину текущей подпоследовательности на 1.
+4) Если число меньше или равно предыдущему, прибавить текущую длину подпоследовательности к сумме длин,
+    увеличить число подпоследовательностей на 1 и обнулить длину текущей подпоследовательности.
+5) Перейти к пункту 2.
+*/
+
+int av_seq(ifstream& fin, double& av) {
+    
+    if (!fin.is_open()) return -3;
+    if (fin.peek() == ifstream::traits_type::eof()) return -1;
+
+    double sum = 0;
+    int num = 0;
+    int len = 1;
+
+    double cur;
+    double prev;
+    fin >> prev;
+
+    while (fin >> cur) {
+        if (cur > prev) {
+            len++;
+        } else {
+            sum += len;
+            num++;
+            len = 1;
+        }
+        prev = cur;
+    }
+
+    if (fin.fail() && !fin.eof()) return -2;
+
+    sum += len;
+    num++;
+
+    av = sum / num;
+    return 0;
+}
