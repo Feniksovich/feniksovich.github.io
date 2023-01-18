@@ -188,9 +188,8 @@ int main() {
 */
 
 int av_seq(ifstream& fin, double& av) {
-    
+
     if (!fin.is_open()) return -3;
-    if (fin.peek() == ifstream::traits_type::eof()) return -1;
 
     double sum = 0;
     int num = 0;
@@ -198,7 +197,8 @@ int av_seq(ifstream& fin, double& av) {
 
     double cur;
     double prev;
-    fin >> prev;
+
+    if (!(fin >> prev)) return -1;
 
     while (fin >> cur) {
         if (cur > prev) {
