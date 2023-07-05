@@ -47,9 +47,10 @@ body {
     https://i.gifer.com/fxk6.gif
     */
     background: url(../assets/maxwell.gif);
+    background-repeat: no-repeat;
     background-position: center;
     /* background-size: 7% 80%; */
-    background-size: 10% 54%;
+    background-size: 16% auto;
     border-radius: 6px 6px 0 0;
 }
 
