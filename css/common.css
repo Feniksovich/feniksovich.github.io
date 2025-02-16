@@ -46,11 +46,11 @@ body {
     https://i.gifer.com/4Cb2.gif
     https://i.gifer.com/fxk6.gif
     */
-    background: url(../assets/maxwell.gif);
+    background: url(../assets/doge-spinning.gif);
     background-repeat: no-repeat;
     background-position: center;
     /* background-size: 7% 80%; */
-    background-size: 16% auto;
+    background-size: 6% auto;
     border-radius: 6px 6px 0 0;
 }
 
